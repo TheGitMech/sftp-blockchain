@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  ganache:
+    image: trufflesuite/ganache-cli
+    container_name: ganache
+    ports:
+      - "8545:8545"
+    command: ganache-cli -h 0.0.0.0 -p 8545 -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
+
+
+  sftp1:
+    image: atmoz/sftp
+    container_name: sftp1
+    ports:
+      - "2222:22"
+    volumes:
+      - ./sftp1/upload:/home/foo/upload
+    command: foo:pass:1001:1000
+
+  sftp2:
+    image: atmoz/sftp
+    container_name: sftp2
+    ports:
+      - "2223:22"
+    volumes:
+      - ./sftp2/upload:/home/foo/upload
+    command: foo:pass:1001:1001
+

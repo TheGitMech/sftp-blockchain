@@ -1,0 +1,18 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Compiled files
+build/
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+
+# Docker
+docker-compose.override.yml
